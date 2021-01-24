@@ -37,6 +37,11 @@ public class vr : MonoBehaviour
             {
                 _hit.transform.gameObject.GetComponent<tp>().TeleportPlayer();
             }
+            
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("SceneTrigger"))
+            {
+                _hit.transform.gameObject.GetComponent<SceneChange>().ChangeScene();
+            }
 
         }
     }
