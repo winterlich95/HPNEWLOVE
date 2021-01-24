@@ -11,7 +11,7 @@ public class vr : MonoBehaviour
     bool gvrStatus;
     float gvrTimer;
 
-    public int distanceOfRay = 10;
+    public int distanceOfRay = 5000;
     private RaycastHit _hit;
 
     // Start is called before the first frame update
