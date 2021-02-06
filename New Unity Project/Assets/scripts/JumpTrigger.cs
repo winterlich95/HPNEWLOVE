@@ -11,7 +11,7 @@ public class JumpTrigger : MonoBehaviour
     public GameObject JumpCam;
     public GameObject FlashImg;
 
-    private void OnTriggerEnter()
+    public void StartJump()
     {
         Scream.Play();
         JumpCam.SetActive(true);
