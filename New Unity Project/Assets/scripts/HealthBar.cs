@@ -35,8 +35,8 @@ public class HealthBar : MonoBehaviour
 
         if (currHP == 0)
         {
-            // TO DO Game Over Display/Text Box
-            Invoke("Restart", 2f);
+            FindObjectOfType<AudioManager>().Play("GameOver");
+            Invoke("Restart", 4f);
         }
     }
 
