@@ -22,7 +22,7 @@ public class DialogueTrigger : MonoBehaviour
     {
         if (!isShown)
         {
-            textboxContainer.transform.position = new Vector3 (teleportTarget.transform.position.x +96.8f, teleportTarget.transform.position.y +150.2f, teleportTarget.transform.position.z -207f);
+            textboxContainer.transform.position = teleportTarget.transform.position;
             textboxContainer.transform.rotation = teleportTarget.transform.rotation;
             isShown = true;
         }
