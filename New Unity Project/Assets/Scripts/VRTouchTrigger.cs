@@ -62,6 +62,18 @@ public class VRTouchTrigger : MonoBehaviour
         
         }
 
+    public void CallImage()
+    {
+        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+
+        if (Physics.Raycast(ray, out _hit, distanceOfRay))
+        {
+
+            _hit.transform.gameObject.GetComponent<CallLetter>().TeleportImage();
+
+        }
+    }
+
         public void EndText()
     {
         FindObjectOfType<DialogueManager>().EndDialogue();
