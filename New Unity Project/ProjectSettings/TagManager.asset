@@ -8,6 +8,7 @@ TagManager:
   - RotateCube
   - SceneTrigger
   - TextTrigger
+  - JumpscareTrigger
   layers:
   - Default
   - TransparentFX
