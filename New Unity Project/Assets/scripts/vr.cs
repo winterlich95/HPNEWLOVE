@@ -48,6 +48,10 @@ public class vr : MonoBehaviour
                 _hit.transform.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
             }
 
+            if (imgGaze.fillAmount == 1 && _hit.transform.CompareTag("AudioTrigger"))
+            {
+                _hit.transform.gameObject.GetComponent<AudioManager>().Play("Pils");
+            }
         }
     }
 

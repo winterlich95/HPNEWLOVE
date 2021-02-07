@@ -10,6 +10,9 @@ TagManager:
   - TextTrigger
   - JumpscareTrigger
   - VRTextTrigger
+  - AudioTrigger
+  - AudiTrigger2
+  - AudioTrigger2
   layers:
   - Default
   - TransparentFX
