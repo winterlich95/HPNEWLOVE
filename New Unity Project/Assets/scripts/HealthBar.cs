@@ -8,7 +8,7 @@ public class HealthBar : MonoBehaviour
 {
     private float maxHP = 100, currHP, currHPSlow;
 
-    public float damge = 10;
+    public float damge = 50;
 
 
 
@@ -36,7 +36,7 @@ public class HealthBar : MonoBehaviour
         if (currHP == 0)
         {
             FindObjectOfType<AudioManager>().Play("GameOver");
-            Invoke("Restart", 4f);
+            Invoke("Restart", 3f);
         }
     }
 
