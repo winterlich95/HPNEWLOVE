@@ -13,6 +13,7 @@ TagManager:
   - AudioTrigger
   - AudiTrigger2
   - AudioTrigger2
+  - PlayButton
   layers:
   - Default
   - TransparentFX
