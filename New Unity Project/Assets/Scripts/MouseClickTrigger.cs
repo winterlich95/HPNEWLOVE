@@ -61,7 +61,11 @@ public class MouseClickTrigger : MonoBehaviour
                     hitObject.gameObject.GetComponent<tp>().TeleportPlayer();
                     break;
 
-                default:
+                case "LetterTrigger":
+                    hitObject.gameObject.GetComponent<CallLetter>().TeleportImage();
+                    break;
+
+            default:
                     print("Das Objekt " + hitObject.gameObject.name + " hat keine Funktion.");
                     break;
             }
