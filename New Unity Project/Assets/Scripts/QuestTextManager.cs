@@ -7,7 +7,7 @@ public class QuestTextManager : MonoBehaviour
 {
     public Text objectName;
     public Text dialogueText;
-    //public Animator animator;
+    public Animator animator;
 
     public Queue<string> sentences;
 
@@ -20,7 +20,7 @@ public class QuestTextManager : MonoBehaviour
 
     public void StartDialogue(Dialogue dialogue)
     {
-        //animator.SetBool("IsOpen", true);
+        animator.SetBool("IsOpen", true);
 
         objectName.text = dialogue.watchedObjectName;
 
@@ -61,6 +61,6 @@ public class QuestTextManager : MonoBehaviour
 
     public void EndDialogue()
     {
-        //animator.SetBool("IsOpen", false);
+        animator.SetBool("IsOpen", false);
     }
 }
