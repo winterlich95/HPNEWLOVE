@@ -46,7 +46,8 @@ public class MouseClickTrigger : MonoBehaviour
                     break;
 
                 case "TextTrigger":
-                    hitObject.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
+                case "QuestboxTrigger":
+                    hitObject.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(tag);
                     break;
 
                 case "AudioTrigger2":
@@ -94,7 +95,7 @@ public class MouseClickTrigger : MonoBehaviour
         if (Physics.Raycast(ray, out _hit, distanceOfRay))
         {
 
-            _hit.transform.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
+            _hit.transform.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(_hit.transform.gameObject.tag);
 
         }
     }

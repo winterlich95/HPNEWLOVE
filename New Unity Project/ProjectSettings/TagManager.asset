@@ -14,6 +14,7 @@ TagManager:
   - AudiTrigger2
   - AudioTrigger2
   - PlayButton
+  - QuestboxTrigger
   layers:
   - Default
   - TransparentFX

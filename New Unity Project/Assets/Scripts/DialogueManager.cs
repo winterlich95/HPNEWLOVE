@@ -8,7 +8,7 @@ public class DialogueManager : MonoBehaviour
 
     public Text objectName;
     public Text dialogueText;
-   // public Animator animator;
+   public Animator animator;
 
     public Queue<string> sentences;
 
@@ -18,12 +18,19 @@ public class DialogueManager : MonoBehaviour
         sentences = new Queue<string>();
     }
 
-
+    public void StartOrEndDialogue(Dialogue dialogue)
+    {
+        if (animator.GetBool("IsOpen") != true)
+        {
+            StartDialogue(dialogue);
+        } else
+        {
+            DisplayNextSentence();
+        }
+    }
     public void StartDialogue(Dialogue dialogue)
     {
-        //animator.SetBool("IsOpen", true);
-
-        Debug.Log("Start description of" + dialogue.watchedObjectName);
+        animator.SetBool("IsOpen", true);
 
         objectName.text = dialogue.watchedObjectName;
 
@@ -35,6 +42,8 @@ public class DialogueManager : MonoBehaviour
         }
 
         DisplayNextSentence();
+
+            
 
     }
     
@@ -49,6 +58,7 @@ public class DialogueManager : MonoBehaviour
         string sentence = sentences.Dequeue();
         StopAllCoroutines();
         StartCoroutine(TypeSentence(sentence));
+        StartCoroutine(EndDialogueAutomatically());
 
     }
 
@@ -62,9 +72,15 @@ public class DialogueManager : MonoBehaviour
         }
     }
 
+    public IEnumerator EndDialogueAutomatically ()
+    {
+        yield return new WaitForSeconds(10);
+        EndDialogue();
+    }
+
     public void EndDialogue()
     {
-        //animator.SetBool("IsOpen", false);
+        animator.SetBool("IsOpen", false);
     }
 
 }

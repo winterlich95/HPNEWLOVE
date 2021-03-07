@@ -41,7 +41,7 @@ public class VRTouchTrigger : MonoBehaviour
         if (Physics.Raycast(ray, out _hit, distanceOfRay))
         {
 
-            _hit.transform.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue();
+            _hit.transform.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(_hit.transform.gameObject.tag);
 
         }
 

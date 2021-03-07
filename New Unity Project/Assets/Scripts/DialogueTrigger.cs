@@ -7,29 +7,45 @@ public class DialogueTrigger : MonoBehaviour
 
     public Dialogue dialogue;
     public bool isShown;
-    public Transform teleportTarget;
-    public GameObject textboxContainer;
+    //public Transform teleportTarget;
+    //public GameObject textboxContainer;
 
 
-    public void TriggerDialogue()
+    public void TriggerDialogue(string tag)
     {
-        FindObjectOfType<DialogueManager>().StartDialogue(dialogue);
-        TeleportTextbox();
+        switch(tag)
+        {
+            case "TextTrigger":
+                FindObjectOfType<DialogueManager>().StartOrEndDialogue(dialogue);
+                break;
+
+            case "QuestboxTrigger":
+                FindObjectOfType<QuestTextManager>().StartDialogue(dialogue);
+                break;
+
+            default:
+                Debug.Log("The Textbox Trigger does not seem to have the correct Tag.");
+                break;
+        }
+        
+        
+        //TeleportTextbox();
     }
 
 
-    private void TeleportTextbox()
-    {
-        if (!isShown)
-        {
-            textboxContainer.transform.position = teleportTarget.transform.position;
-            textboxContainer.transform.rotation = teleportTarget.transform.rotation;
-            isShown = true;
-        }
-        else
-        {
-            textboxContainer.transform.position = new Vector3(0f, -40f, 0f);
-            isShown = false;
-        }
-    }
+    //method for vr-friendly text, not necessary anymore
+    //private void TeleportTextbox()
+    //{
+    //    if (!isShown)
+    //    {
+    //        textboxContainer.transform.position = teleportTarget.transform.position;
+    //        textboxContainer.transform.rotation = teleportTarget.transform.rotation;
+    //        isShown = true;
+    //    }
+    //    else
+    //    {
+    //        textboxContainer.transform.position = new Vector3(0f, -40f, 0f);
+    //        isShown = false;
+    //    }
+   // }
 }

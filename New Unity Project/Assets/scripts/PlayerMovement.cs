@@ -12,6 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public float jumpHeight = 3f;
 
+    public Animator animator;
+
     Vector3 velocity;
 
     bool isGrounded;
@@ -42,5 +44,17 @@ public class PlayerMovement : MonoBehaviour
         }
         velocity.y += gravity*Time.deltaTime;
         controller.Move(velocity * Time.deltaTime);
+
+        if(Input.GetButtonDown("Cancel"))
+        {
+            animator.SetBool("IsOpen", false);
+        }
+
+        if(Input.GetButtonDown("Submit"))
+        {
+            animator.SetBool("IsOpen", true);
+        }
+
+        
     }
 }
