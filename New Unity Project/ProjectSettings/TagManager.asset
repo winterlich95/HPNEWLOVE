@@ -4,17 +4,9 @@
 TagManager:
   serializedVersion: 2
   tags:
-  - Teleport
-  - RotateCube
-  - SceneTrigger
-  - TextTrigger
-  - JumpscareTrigger
-  - VRTextTrigger
-  - AudioTrigger
-  - AudiTrigger2
-  - AudioTrigger2
-  - PlayButton
-  - QuestboxTrigger
+  - Key
+  - InteractiveObject
+  - DoorButton
   layers:
   - Default
   - TransparentFX
@@ -24,8 +16,8 @@ TagManager:
   - UI
   - 
   - 
-  - Ground
-  - 
+  - PostProcessing
+  - Interact
   - 
   - 
   - 
