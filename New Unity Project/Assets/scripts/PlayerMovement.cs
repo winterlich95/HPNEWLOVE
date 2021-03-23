@@ -12,7 +12,8 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public float jumpHeight = 3f;
 
-    public Animator animator;
+    public Animator animatorQuestBox;
+    public Animator animatorStoryBox;
 
     Vector3 velocity;
 
@@ -49,12 +50,14 @@ public class PlayerMovement : MonoBehaviour
 
         if(Input.GetButtonDown("Cancel"))
         {
-            animator.SetBool("IsOpen", false);
+            animatorQuestBox.SetBool("IsOpen", false);
+            animatorStoryBox.SetBool("IsOpen", false);
+
         }
 
         if(Input.GetButtonDown("Submit"))
         {
-            animator.SetBool("IsOpen", true);
+            animatorQuestBox.SetBool("IsOpen", true);
         }
 
         
