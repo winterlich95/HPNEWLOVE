@@ -7,21 +7,17 @@ using UnityEngine.SceneManagement;
 public class KeyScript : MonoBehaviour
 {
 
-    bool keystate;
     public string sceneName;
-
-    public void Start()
-    {
-         keystate = GetComponent<Keyinventory>().hasKey;
-    }
-
-
+    public GameObject key;
     public void OpenDoor()
     {
-        if (keystate == true) {
+
+        if (!key.activeSelf)
+        {
 
             SceneManager.LoadScene(sceneName);
         }
     }
 }
+
 

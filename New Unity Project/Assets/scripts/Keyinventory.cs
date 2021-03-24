@@ -2,10 +2,10 @@
 
 public class Keyinventory : MonoBehaviour
 {
-    public bool hasKey = false;
 
-    public void collectKey()
+    public void KeyPick()
     {
-        hasKey = true;
+        this.gameObject.SetActive(false);
     }
+
 }

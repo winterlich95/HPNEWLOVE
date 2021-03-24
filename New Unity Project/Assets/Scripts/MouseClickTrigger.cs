@@ -45,12 +45,12 @@ public class MouseClickTrigger : MonoBehaviour
                     hitObject.gameObject.GetComponent<JumpTrigger>().StartJump();
                     break;
 
-            case "Key":
-                hitObject.gameObject.GetComponent<Keyinventory>().collectKey();
-                break;
-
             case "Door":
                 hitObject.gameObject.GetComponent<KeyScript>().OpenDoor();
+                break;
+
+            case "Key":
+                hitObject.gameObject.GetComponent<Keyinventory>().KeyPick();
                 break;
 
 
