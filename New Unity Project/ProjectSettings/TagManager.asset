@@ -10,6 +10,7 @@ TagManager:
   - QuestboxTrigger
   - TextTrigger
   - Door
+  - PlayerCollide
   layers:
   - Default
   - TransparentFX

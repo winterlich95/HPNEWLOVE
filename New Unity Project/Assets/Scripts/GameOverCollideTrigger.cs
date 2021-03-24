@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameOverCollideTrigger : MonoBehaviour
 {
-    public Transform thePlayer;
 
-    public void OnCollissionEnter(Collision hitObject)
+    public void OnCollisionEnter(Collision hitObject)
     {
-        if (hitObject.gameObject.transform == thePlayer)
+        if (hitObject.collider.tag == "PlayerCollide")
         {
-            SceneManager.LoadScene(SceneManager.GetActiveScene().name);
+            Debug.Log("Collision");
+             FindObjectOfType<GameManager>().EndGame();
         }
     }
 }
