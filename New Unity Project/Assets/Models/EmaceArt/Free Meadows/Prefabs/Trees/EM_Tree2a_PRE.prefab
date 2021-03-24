@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 4248351730400896}
   - component: {fileID: 33787946625406446}
   - component: {fileID: 23843814556013384}
+  - component: {fileID: 8900923311431054899}
   m_Layer: 0
   m_Name: EM_Tree2a_LOD0
   m_TagString: Untagged
@@ -79,6 +80,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &8900923311431054899
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1570900217067286}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 4544065189221927786, guid: 50578a73428c8cb478ef3d1596d57722, type: 3}
 --- !u!1 &1623876917276176
 GameObject:
   m_ObjectHideFlags: 0
@@ -166,6 +181,7 @@ GameObject:
   - component: {fileID: 8346740994517200893}
   - component: {fileID: 2329659253855125176}
   - component: {fileID: 5625902058855901861}
+  - component: {fileID: 5928775060083674506}
   m_Layer: 0
   m_Name: EM_Tree2a_LOD1
   m_TagString: Untagged
@@ -234,6 +250,20 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!64 &5928775060083674506
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1523311536647712690}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 4
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: -6050202872141949974, guid: 50578a73428c8cb478ef3d1596d57722, type: 3}
 --- !u!1 &8866304096142924030
 GameObject:
   m_ObjectHideFlags: 0
