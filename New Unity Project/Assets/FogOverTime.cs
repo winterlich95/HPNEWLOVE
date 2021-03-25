@@ -16,7 +16,7 @@ public class FogOverTime : MonoBehaviour
     {
         while (true)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(1);
             RenderSettings.fogDensity += 0.01f;
 
         }
