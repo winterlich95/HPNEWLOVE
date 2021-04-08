@@ -11,6 +11,9 @@ TagManager:
   - TextTrigger
   - Door
   - PlayerCollide
+  - NoteDeadMan
+  - NoteMerwin
+  - NoteSon
   layers:
   - Default
   - TransparentFX

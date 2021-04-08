@@ -75,6 +75,12 @@ public class MouseClickTrigger : MonoBehaviour
                     hitObject.gameObject.GetComponent<CallLetter>().TeleportImage();
                     break;
 
+                case "NoteDeadMan":
+                case "NoteMerwin":
+                case "NoteSon":
+                    hitObject.gameObject.GetComponent<NoteManager>().ChangeState();
+                    break;
+
                 default:
                     print("Das Objekt " + hitObject.gameObject.name + " hat keine Funktion.");
                     break;
