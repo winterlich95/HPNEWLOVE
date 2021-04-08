@@ -74,7 +74,7 @@ public class DialogueManager : MonoBehaviour
 
     public IEnumerator EndDialogueAutomatically ()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(25);
         EndDialogue();
     }
 

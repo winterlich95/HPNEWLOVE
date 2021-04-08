@@ -45,16 +45,16 @@ public class MouseClickTrigger : MonoBehaviour
                     hitObject.gameObject.GetComponent<JumpTrigger>().StartJump();
                     break;
 
-            case "Door":
-                hitObject.gameObject.GetComponent<KeyScript>().OpenDoor();
-                break;
+                case "Door":
+                    hitObject.gameObject.GetComponent<KeyScript>().OpenDoor();
+                    break;
 
-            case "Key":
-                hitObject.gameObject.GetComponent<Keyinventory>().KeyPick();
-                break;
+                case "Key":
+                    hitObject.gameObject.GetComponent<Keyinventory>().KeyPick();
+                    break;
 
 
-            case "TextTrigger":
+                case "TextTrigger":
                 case "QuestboxTrigger":
                     hitObject.gameObject.GetComponent<DialogueTrigger>().TriggerDialogue(tag);
                     break;
@@ -75,7 +75,7 @@ public class MouseClickTrigger : MonoBehaviour
                     hitObject.gameObject.GetComponent<CallLetter>().TeleportImage();
                     break;
 
-            default:
+                default:
                     print("Das Objekt " + hitObject.gameObject.name + " hat keine Funktion.");
                     break;
             }
