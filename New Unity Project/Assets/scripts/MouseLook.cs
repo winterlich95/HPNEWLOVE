@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class MouseLook : MonoBehaviour
 {
+    [SerializeField] public List<string> selectableTags;
     public float mouseSensitivity = 100f;
     public Transform playerBody;
     float xRotation = 0f;
@@ -18,6 +19,19 @@ public class MouseLook : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        var ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+        RaycastHit hit;
+        if (Physics.Raycast(ray, out hit, 100.0f))
+        {
+            if ((hit.transform != null) && (selectableTags.Contains(hit.transform.gameObject.tag)))
+            {
+                FindObjectOfType<ChangingColor>().MouseOverColor();
+            } else
+            {
+                FindObjectOfType<ChangingColor>().RegularColor();
+            }
+        }
+
         float mouseX = Input.GetAxis("Mouse X") * mouseSensitivity * Time.deltaTime;
         float mouseY = Input.GetAxis("Mouse Y") * mouseSensitivity * Time.deltaTime;
 
