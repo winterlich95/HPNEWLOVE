@@ -12,6 +12,9 @@ public class PlayerMovement : MonoBehaviour
     public LayerMask groundMask;
     public float jumpHeight = 3f;
 
+    public bool isSprinting = false;
+    public float sprintingMultiplier;
+
     public Animator animatorQuestBox;
     public Animator animatorStoryBox;
 
@@ -39,13 +42,29 @@ public class PlayerMovement : MonoBehaviour
 
         Vector3 move = transform.right * x + transform.forward * z;
 
+        if (Input.GetKey(KeyCode.LeftShift))
+        {
+            isSprinting = true;
+        }
+
+        else
+        {
+            isSprinting = false;
+        }
+
+        if (isSprinting == true)
+        {
+            move *= sprintingMultiplier;
+        }
+
         controller.Move(move* speed * Time.deltaTime );
+
          if(Input.GetButtonDown("Jump") && isGrounded )
         {
             velocity.y = Mathf.Sqrt(jumpHeight* -2f* gravity);
         }
+
         velocity.y += gravity*Time.deltaTime;
-        
         controller.Move(velocity * Time.deltaTime);
 
         if(Input.GetButtonDown("Cancel"))
