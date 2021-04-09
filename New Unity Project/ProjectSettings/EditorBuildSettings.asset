@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/Demo Day.unity
     guid: 67adac43bcf286444be612074ab04f75
   - enabled: 1
-    path: Assets/Scenes/a 1.unity
+    path: Assets/Scenes/a1.unity
     guid: 5620345f4169b1e458f3b7565d308de7
   - enabled: 1
     path: Assets/Scenes/Demo Night.unity

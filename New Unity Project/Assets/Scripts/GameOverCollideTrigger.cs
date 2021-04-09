@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class GameOverCollideTrigger : MonoBehaviour
 {
-
-    public void OnCollisionEnter(Collision hitObject)
+    public GameObject player;
+    
+    public void OnTriggerEnter(Collider player)
     {
-        if (hitObject.collider.tag == "PlayerCollide")
-        {
+        
             Debug.Log("Collision");
-            FindObjectOfType<GameOverScreen>().StartScreen();
-        }
+            SceneManager.LoadScene("a1");
+
     }
 }
