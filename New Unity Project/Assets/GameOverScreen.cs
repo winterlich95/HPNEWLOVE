@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class GameOverScreen : MonoBehaviour
 {
-  
+    public Animator animator;
     
         public void OnCollisionEnter(Collision hitObject)
         {
@@ -17,13 +17,27 @@ public class GameOverScreen : MonoBehaviour
             }
         }
 
+        public void StartScreen()
+    {
+        Debug.Log("StartScreen wurde ausgeführt.");
+        if (animator.GetBool("IsOpen") == false)
+        {
+            animator.SetBool("IsOpen", true);
+        }
+        //FindObjectOfType<PlayerMovement>().enabled = false;
+        //FindObjectOfType<MouseLook>().enabled = false;
+
+    }
+
         public void ExiTButton()
         {
-         SceneManager.LoadScene("");
+        animator.SetBool("IsOpen", false);
+        SceneManager.LoadScene("");
          }
         
         public void RestartButton()
         {
+        animator.SetBool("IsOpen", false);
         SceneManager.LoadScene("");
         }
 

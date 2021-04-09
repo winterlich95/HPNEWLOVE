@@ -11,7 +11,7 @@ public class GameOverCollideTrigger : MonoBehaviour
         if (hitObject.collider.tag == "PlayerCollide")
         {
             Debug.Log("Collision");
-             FindObjectOfType<GameManager>().EndGame();
+            FindObjectOfType<GameOverScreen>().StartScreen();
         }
     }
 }

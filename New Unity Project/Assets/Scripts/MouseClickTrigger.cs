@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class MouseClickTrigger : MonoBehaviour
 {
     [SerializeField] public List<string> selectableTags;
+    
 
 
 
@@ -20,6 +21,9 @@ public class MouseClickTrigger : MonoBehaviour
 
     void Update()
     {
+
+
+
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit _hit;
@@ -80,6 +84,10 @@ public class MouseClickTrigger : MonoBehaviour
                 case "NoteMerwin":
                 case "NoteSon":
                     hitObject.gameObject.GetComponent<NoteManager>().ChangeState();
+                    break;
+
+                case "DoorTrigger":
+                    hitObject.gameObject.GetComponent<FrontDoorScript>().OpenDoor();
                     break;
 
                 default:
@@ -159,5 +167,6 @@ public class MouseClickTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogueManager>().EndDialogue();
     }
+
 
 }
