@@ -23,6 +23,7 @@ public class MouseClickTrigger : MonoBehaviour
         if (Input.GetMouseButtonDown(0))
         {
             RaycastHit _hit;
+
             Ray ray = Camera.main.ScreenPointToRay(new Vector3(Screen.width / 2f, Screen.height / 2f, 0f));
 
             if (Physics.Raycast(ray, out _hit, 100.0f))
