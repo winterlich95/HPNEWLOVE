@@ -11,7 +11,7 @@ public class GameOverCollideTrigger : MonoBehaviour
     {
         
             Debug.Log("Collision");
-            SceneManager.LoadScene("a1");
+            SceneManager.LoadScene("GameOverMenu");
 
     }
 }

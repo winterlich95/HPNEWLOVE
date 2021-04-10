@@ -89,8 +89,11 @@ public class MouseClickTrigger : MonoBehaviour
                 case "DoorTrigger":
                     hitObject.gameObject.GetComponent<FrontDoorScript>().OpenDoor();
                     break;
+            case "VictoryTrigger":
+                hitObject.gameObject.GetComponent<Finishgame>().KeyPick();
+                break;
 
-                default:
+            default:
                     print("Das Objekt " + hitObject.gameObject.name + " hat keine Funktion.");
                     break;
             }

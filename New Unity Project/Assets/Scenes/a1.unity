@@ -1146,18 +1146,21 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   controller: {fileID: 460082716}
-  speed: 6.56
+  speed: 3.66
   gravity: -40
   groundCheck: {fileID: 1689596225}
   groundDistance: 0.4
   groundMask:
     serializedVersion: 2
     m_Bits: 1024
-  jumpHeight: 3
+  jumpHeight: 1.41
   isSprinting: 0
   sprintingMultiplier: 1.5
-  animatorQuestBox: {fileID: 0}
-  animatorStoryBox: {fileID: 0}
+  animatorQuestBox: {fileID: 24811806}
+  animatorStoryBox: {fileID: 1354571347}
+  note1: {fileID: 0}
+  note2: {fileID: 0}
+  note3: {fileID: 0}
 --- !u!114 &460082714
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1192,12 +1195,12 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 460082711}
-  m_Enabled: 0
+  m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: bd1da6d3b747c154c81af2111651248d, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 966ce93c4c8028d4a83743b07ddd7187, type: 3}
   m_PlayOnAwake: 1
-  m_Volume: 0.559
+  m_Volume: 0.277
   m_Pitch: 1
   Loop: 1
   Mute: 0
@@ -2854,6 +2857,52 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 832911705}
   m_PrefabAsset: {fileID: 0}
+--- !u!1 &867208373
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 867208375}
+  - component: {fileID: 867208374}
+  m_Layer: 0
+  m_Name: Dialog
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &867208374
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867208373}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 875e3fd24bc238a41bf40598e7c0cf24, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: {fileID: 1816753155}
+  dialogueText: {fileID: 2035880014}
+  animator: {fileID: 1354571347}
+--- !u!4 &867208375
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 867208373}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5353663, y: -0.5577115, z: -3.6190352}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 10
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &877706593
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3866,6 +3915,23 @@ GameObject:
     type: 3}
   m_PrefabInstance: {fileID: 1735830027}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1059666325
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1059666324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1a75b4029ac969c4086a8f5b427d9cb3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  dialogue:
+    watchedObjectName: 
+    sentences:
+    - "Fl\xFCchte von der Heide!"
+  isShown: 0
 --- !u!114 &1059666328
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -5488,6 +5554,12 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 485684, guid: 1ca36c4bdaa81a14a8b52d79cc04b095,
     type: 3}
   m_PrefabInstance: {fileID: 1343480830}
+  m_PrefabAsset: {fileID: 0}
+--- !u!95 &1354571347 stripped
+Animator:
+  m_CorrespondingSourceObject: {fileID: 2390302731101530316, guid: 3a28f60d97a183340a9ee4379a9cf795,
+    type: 3}
+  m_PrefabInstance: {fileID: 1703983825}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1362747797
 GameObject:
@@ -7387,6 +7459,11 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 919132149155446097, guid: e00fa7da43afe72438bb14254df4f3ba,
         type: 3}
+      propertyPath: m_TagString
+      value: QuestboxTrigger
+      objectReference: {fileID: 0}
+    - target: {fileID: 919132149155446097, guid: e00fa7da43afe72438bb14254df4f3ba,
+        type: 3}
       propertyPath: m_StaticEditorFlags
       value: 4294967295
       objectReference: {fileID: 0}
@@ -7913,6 +7990,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1811536997}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1816753155 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2390302730310839209, guid: 3a28f60d97a183340a9ee4379a9cf795,
+    type: 3}
+  m_PrefabInstance: {fileID: 1703983825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1841372590
 GameObject:
   m_ObjectHideFlags: 0
@@ -8075,7 +8164,7 @@ PrefabInstance:
     - target: {fileID: 5461359501388249677, guid: d46edb4dacdf86f4c8d667d9aa3b9afd,
         type: 3}
       propertyPath: sceneName
-      value: Night
+      value: Demo Night
       objectReference: {fileID: 0}
     - target: {fileID: 5461359501388249678, guid: d46edb4dacdf86f4c8d667d9aa3b9afd,
         type: 3}
@@ -8608,6 +8697,52 @@ PrefabInstance:
     - {fileID: 104751412063144494, guid: ce5ca6cd5e2f815499fe096a6cd386f4, type: 3}
     - {fileID: 104751412063144495, guid: ce5ca6cd5e2f815499fe096a6cd386f4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: ce5ca6cd5e2f815499fe096a6cd386f4, type: 3}
+--- !u!1 &1965409912
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1965409914}
+  - component: {fileID: 1965409913}
+  m_Layer: 0
+  m_Name: Quest
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1965409913
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965409912}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 180fe12743053f24cb4f7cf05f596dcf, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objectName: {fileID: 1378416576}
+  dialogueText: {fileID: 1613580992}
+  animator: {fileID: 24811806}
+--- !u!4 &1965409914
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1965409912}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -1.5353663, y: -0.5577115, z: -3.6190352}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 11
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1001 &2032297271
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8683,6 +8818,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 2032297271}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &2035880014 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 2390302730818559578, guid: 3a28f60d97a183340a9ee4379a9cf795,
+    type: 3}
+  m_PrefabInstance: {fileID: 1703983825}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5f7201a12d95ffc409449d95f23cf332, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2063448011
 GameObject:
   m_ObjectHideFlags: 0

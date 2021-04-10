@@ -9,6 +9,7 @@ public class AnimalRunaway : MonoBehaviour
     public float lookRadius = 10f;
     Transform target;
     Transform chasepoint;
+    public Animator anim;
     NavMeshAgent agent;
     // Start is called before the first frame update
 
@@ -27,7 +28,7 @@ public class AnimalRunaway : MonoBehaviour
         if (distance <= lookRadius)
         {
             agent.SetDestination(chasepoint.position);
-
+           anim.SetBool("isRunning", true);
             if (distance >= lookRadius)
             {
                 //Attack

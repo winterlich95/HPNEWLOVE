@@ -18,6 +18,12 @@ public class PlayerMovement : MonoBehaviour
     public Animator animatorQuestBox;
     public Animator animatorStoryBox;
 
+    public Animator note1;
+    public Animator note2;
+
+    public Animator note3;
+ 
+
     Vector3 velocity;
 
     bool isGrounded;
@@ -71,6 +77,10 @@ public class PlayerMovement : MonoBehaviour
         {
             animatorQuestBox.SetBool("IsOpen", false);
             animatorStoryBox.SetBool("IsOpen", false);
+            note1.SetBool("IsOpen", false);
+            note2.SetBool("IsOpen", false);
+            note3.SetBool("IsOpen", false);
+           
 
         }
 

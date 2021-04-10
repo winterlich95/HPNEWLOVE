@@ -29,5 +29,6 @@ public class JumpTrigger : MonoBehaviour
         JumpCam.SetActive(false);
         FlashImg.SetActive(false);
         FindObjectOfType<PlayerMovement>().enabled = true;
+
     }
 }

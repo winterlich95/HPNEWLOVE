@@ -15,6 +15,11 @@ TagManager:
   - NoteMerwin
   - NoteSon
   - DoorTrigger
+  - AudioTrigger
+  - AudioTrigger2
+  - SceneTrigger
+  - PlayButton
+  - VictoryTrigger
   layers:
   - Default
   - TransparentFX
