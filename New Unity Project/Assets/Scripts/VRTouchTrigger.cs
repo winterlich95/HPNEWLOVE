@@ -20,19 +20,19 @@ public class VRTouchTrigger : MonoBehaviour
     }
 
 
-    public void CallJump()
-    {
-        Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
+ //   public void CallJump()
+//    {
+  //      Ray ray = Camera.main.ViewportPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        if (Physics.Raycast(ray, out _hit, distanceOfRay) && _hit.transform.CompareTag("JumpscareTrigger"))
-        {
+  //      if (Physics.Raycast(ray, out _hit, distanceOfRay) && _hit.transform.CompareTag("JumpscareTrigger"))
+ //       {
 
-            _hit.transform.gameObject.GetComponent<JumpTrigger>().StartJump();
+ //           _hit.transform.gameObject.GetComponent<JumpTrigger>().StartJump();
 
-        }
+  //      }
 
 
-    }
+ //   }
 
     public void CallText()
     {

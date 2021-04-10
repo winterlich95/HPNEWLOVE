@@ -46,9 +46,9 @@ public class MouseClickTrigger : MonoBehaviour
             string tag = hitObject.gameObject.tag;
             switch (tag)
             {
-                case "JumpscareTrigger":
-                    hitObject.gameObject.GetComponent<JumpTrigger>().StartJump();
-                    break;
+    //            case "JumpscareTrigger":
+    //                hitObject.gameObject.GetComponent<JumpTrigger>().StartJump();
+      //              break;
 
                 case "Door":
                     hitObject.gameObject.GetComponent<KeyScript>().OpenDoor();
@@ -98,19 +98,19 @@ public class MouseClickTrigger : MonoBehaviour
     }
 
 
-    public void CallJump()
-    {
-        Ray ray = Camera.main.ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
+   // public void CallJump()
+   // {
+     //   Ray ray = Camera.main.ScreenPointToRay(new Vector3(0.5f, 0.5f, 0f));
 
-        if (Physics.Raycast(ray, out _hit, distanceOfRay))
-        {
+    //    if (Physics.Raycast(ray, out _hit, distanceOfRay))
+      //  {
 
-            _hit.transform.gameObject.GetComponent<JumpTrigger>().StartJump();
+    //        _hit.transform.gameObject.GetComponent<JumpTrigger>().StartJump();
 
-        }
+     //   }
 
 
-    }
+    //}
 
     public void CallTeleport()
     {

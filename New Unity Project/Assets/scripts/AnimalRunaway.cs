@@ -11,6 +11,7 @@ public class AnimalRunaway : MonoBehaviour
     Transform chasepoint;
     NavMeshAgent agent;
     // Start is called before the first frame update
+
     void Start()
     {
         target = PlayerManager.instance.player.transform;
@@ -26,6 +27,7 @@ public class AnimalRunaway : MonoBehaviour
         if (distance <= lookRadius)
         {
             agent.SetDestination(chasepoint.position);
+
             if (distance >= lookRadius)
             {
                 //Attack

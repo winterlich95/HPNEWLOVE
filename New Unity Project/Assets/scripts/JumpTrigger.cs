@@ -11,12 +11,13 @@ public class JumpTrigger : MonoBehaviour
     public GameObject JumpCam;
     public GameObject FlashImg;
 
-    public void StartJump()
+    public void OnTriggerEnter()
     {
         Scream.Play();
         JumpCam.SetActive(true);
         ThePlayer.SetActive(false);
         FlashImg.SetActive(true);
+        FindObjectOfType<PlayerMovement>().enabled = false;
         StartCoroutine(EndJump());
     }
 
@@ -27,5 +28,6 @@ public class JumpTrigger : MonoBehaviour
         
         JumpCam.SetActive(false);
         FlashImg.SetActive(false);
+        FindObjectOfType<PlayerMovement>().enabled = true;
     }
 }
