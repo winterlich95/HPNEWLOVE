@@ -19,7 +19,7 @@ public class FogOverTime : MonoBehaviour
         while (true)
         {
             yield return new WaitForSeconds(1);
-            RenderSettings.fogDensity += 0.003f;
+            RenderSettings.fogDensity += 0.0028f;
             if(RenderSettings.fogDensity >= 0.2f)
             {
                 SceneManager.LoadScene("GameOverMenu");

@@ -17,10 +17,10 @@ public class Finishgame : MonoBehaviour
 
     IEnumerator EndJump()
     {
-        yield return new WaitForSeconds(10f);
+        yield return new WaitForSeconds(4f);
 
         StopAllCoroutines();
-        SceneManager.LoadScene("GameMenu");
+        SceneManager.LoadScene("Hauptmenü");
 
     }
 }

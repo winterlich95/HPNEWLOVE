@@ -54,7 +54,11 @@ public class MouseClickTrigger : MonoBehaviour
                     hitObject.gameObject.GetComponent<KeyScript>().OpenDoor();
                     break;
 
-                case "Key":
+            case "untersuchehaus":
+                hitObject.gameObject.GetComponent<untersuchehaus>().triggerquest();
+                break;
+
+            case "Key":
                     hitObject.gameObject.GetComponent<Keyinventory>().KeyPick();
                     break;
 

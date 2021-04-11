@@ -20,6 +20,8 @@ TagManager:
   - SceneTrigger
   - PlayButton
   - VictoryTrigger
+  - untersuchehaus
+  - Squirel
   layers:
   - Default
   - TransparentFX

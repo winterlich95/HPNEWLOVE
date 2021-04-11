@@ -27,8 +27,9 @@ public class AnimalRunaway : MonoBehaviour
         float distance = Vector3.Distance(target.position, transform.position);
         if (distance <= lookRadius)
         {
-            agent.SetDestination(chasepoint.position);
+           agent.SetDestination(chasepoint.position);
            anim.SetBool("isRunning", true);
+            
             if (distance >= lookRadius)
             {
                 //Attack
@@ -36,6 +37,8 @@ public class AnimalRunaway : MonoBehaviour
             }
         }
     }
+
+   
 
     void FaceTarget()
     {

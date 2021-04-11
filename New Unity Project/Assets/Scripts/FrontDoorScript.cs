@@ -31,7 +31,7 @@ public class FrontDoorScript : MonoBehaviour
 
     public IEnumerator TriggerSceneChange()
     {
-        yield return new WaitForSeconds(10);
+        yield return new WaitForSeconds(4f);
         SceneManager.LoadScene(sceneName);
     }
 }
